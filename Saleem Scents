@@ -44,7 +44,7 @@ export default function SaleemScents() {
           </p>
 
           <h2 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-            One winter fragrance in development.
+            Winter fragrance in development.
           </h2>
 
           <p className="mb-8 max-w-xl text-lg leading-relaxed text-neutral-300">
