@@ -1,8 +1,265 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saleem Scents</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen bg-neutral-950 text-white font-sans">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div>
+        <h1 class="text-2xl font-bold tracking-wide">SALEEM SCENTS</h1>
+        <p class="text-xs uppercase tracking-[0.3em] text-neutral-400">
+          Fragrance Creations
+        </p>
+      </div>
+
+      <nav class="hidden gap-8 text-sm text-neutral-300 md:flex">
+        <a href="#home" class="transition hover:text-white">Home</a>
+        <a href="#products" class="transition hover:text-white">Projects</a>
+        <a href="#about" class="transition hover:text-white">About</a>
+        <a href="#contact" class="transition hover:text-white">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section
+    id="home"
+    class="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center"
+  >
+    <div>
+      <p class="mb-4 text-sm uppercase tracking-[0.4em] text-neutral-400">
+        Independent Fragrance Brand
+      </p>
+
+      <h2 class="mb-6 text-5xl font-bold leading-tight md:text-6xl">
+        New fragrances currently under development.
+      </h2>
+
+      <p class="mb-8 max-w-xl text-lg leading-relaxed text-neutral-300">
+        Saleem Scents is developing unique fragrances inspired by modern luxury perfumery.
+        Stay tuned for future releases and limited early-access opportunities.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="#products"
+          class="rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:opacity-90"
+        >
+          View Projects
+        </a>
+
+        <a
+          href="#contact"
+          class="rounded-2xl border border-white/20 px-6 py-3 transition hover:border-white/40"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="flex aspect-square items-center justify-center rounded-[2rem] border border-white/10 bg-gradient-to-br from-neutral-800 to-neutral-900 shadow-2xl">
+        <div class="px-8 text-center">
+          <div class="mx-auto mb-6 flex h-40 w-28 items-center justify-center rounded-b-xl rounded-t-[2rem] border border-white/20 bg-neutral-800">
+            <span class="rotate-90 text-sm tracking-[0.3em] text-neutral-300">
+              PERFUME
+            </span>
+          </div>
+
+          <h3 class="mb-2 text-2xl font-semibold">Luxury Bottled</h3>
+
+          <p class="text-sm text-neutral-400">
+            Elegant fragrances with a modern presentation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="mx-auto max-w-7xl px-6 py-20">
+    <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="mb-3 text-sm uppercase tracking-[0.3em] text-neutral-400">
+          In Development
+        </p>
+
+        <h2 class="text-4xl font-bold">Upcoming Fragrances</h2>
+      </div>
+
+      <a
+        href="#contact"
+        class="w-fit rounded-2xl border border-white/15 px-5 py-3 text-sm transition hover:border-white/40"
+      >
+        Inquire Now
+      </a>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+        <div class="mb-6 flex aspect-square items-center justify-center rounded-2xl bg-neutral-800">
+          <div class="h-28 w-20 rounded-b-lg rounded-t-2xl border border-white/20 bg-neutral-700"></div>
+        </div>
+
+        <div class="mb-2 flex items-start justify-between gap-4">
+          <h3 class="text-xl font-semibold">Fragrance Project 01</h3>
+          <span class="text-sm text-neutral-300">Under Development</span>
+        </div>
+
+        <p class="mb-6 text-sm leading-relaxed text-neutral-400">
+          A warm and sweet luxury-inspired scent currently in development.
+        </p>
+
+        <a
+          href="#contact"
+          class="block w-full rounded-xl bg-white py-3 text-center font-medium text-black transition hover:opacity-90"
+        >
+          Contact for Updates
+        </a>
+      </div>
+
+      <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+        <div class="mb-6 flex aspect-square items-center justify-center rounded-2xl bg-neutral-800">
+          <div class="h-28 w-20 rounded-b-lg rounded-t-2xl border border-white/20 bg-neutral-700"></div>
+        </div>
+
+        <div class="mb-2 flex items-start justify-between gap-4">
+          <h3 class="text-xl font-semibold">Fragrance Project 02</h3>
+          <span class="text-sm text-neutral-300">Under Development</span>
+        </div>
+
+        <p class="mb-6 text-sm leading-relaxed text-neutral-400">
+          A fresh green fragrance concept designed for everyday wear.
+        </p>
+
+        <a
+          href="#contact"
+          class="block w-full rounded-xl bg-white py-3 text-center font-medium text-black transition hover:opacity-90"
+        >
+          Contact for Updates
+        </a>
+      </div>
+
+      <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+        <div class="mb-6 flex aspect-square items-center justify-center rounded-2xl bg-neutral-800">
+          <div class="h-28 w-20 rounded-b-lg rounded-t-2xl border border-white/20 bg-neutral-700"></div>
+        </div>
+
+        <div class="mb-2 flex items-start justify-between gap-4">
+          <h3 class="text-xl font-semibold">Fragrance Project 03</h3>
+          <span class="text-sm text-neutral-300">Under Development</span>
+        </div>
+
+        <p class="mb-6 text-sm leading-relaxed text-neutral-400">
+          A bold evening fragrance blending oud, woods, and spice.
+        </p>
+
+        <a
+          href="#contact"
+          class="block w-full rounded-xl bg-white py-3 text-center font-medium text-black transition hover:opacity-90"
+        >
+          Contact for Updates
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="about"
+    class="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-2 lg:items-center"
+  >
+    <div class="rounded-[2rem] border border-white/10 bg-white/5 p-10">
+      <p class="mb-4 text-sm uppercase tracking-[0.3em] text-neutral-400">
+        About The Brand
+      </p>
+
+      <h2 class="mb-6 text-4xl font-bold">
+        Crafted with passion for fragrance.
+      </h2>
+
+      <p class="mb-4 leading-relaxed text-neutral-300">
+        Saleem Scents focuses on creating high-quality fragrances with strong
+        performance, modern style, and carefully selected ingredients.
+      </p>
+
+      <p class="leading-relaxed text-neutral-400">
+        This page currently serves as the official landing page for Saleem Scents
+        while new fragrances are under development.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-6">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h3 class="mb-2 text-3xl font-bold">Long</h3>
+        <p class="text-sm text-neutral-400">Lasting performance</p>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h3 class="mb-2 text-3xl font-bold">Modern</h3>
+        <p class="text-sm text-neutral-400">Luxury-inspired style</p>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h3 class="mb-2 text-3xl font-bold">Future</h3>
+        <p class="text-sm text-neutral-400">Ready for e-commerce</p>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h3 class="mb-2 text-3xl font-bold">Global</h3>
+        <p class="text-sm text-neutral-400">Expandable brand vision</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="mx-auto max-w-4xl px-6 py-20">
+    <div class="rounded-[2rem] border border-white/10 bg-white/5 p-10 text-center">
+      <p class="mb-4 text-sm uppercase tracking-[0.3em] text-neutral-400">
+        Contact
+      </p>
+
+      <h2 class="mb-4 text-4xl font-bold">Get In Touch</h2>
+
+      <p class="mx-auto mb-8 max-w-2xl leading-relaxed text-neutral-300">
+        For inquiries, collaborations, or to make a purchase, please contact
+        Saleem Scents through the channels below.
+      </p>
+
+      <div class="flex flex-col items-center gap-4 text-neutral-300">
+        <a
+          href="https://instagram.com/saleemscents"
+          target="_blank"
+          rel="noreferrer"
+          class="rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:opacity-90"
+        >
+          @saleemscents
+        </a>
+
+        <a
+          href="mailto:your@email.com"
+          class="rounded-2xl border border-white/20 px-6 py-3 transition hover:border-white/40"
+        >
+          your@email.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-12 border-t border-white/10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-neutral-500 md:flex-row">
+      <p>© 2026 Saleem Scents. All rights reserved.</p>
+
+      <div class="flex gap-6">
+        <a href="#" class="transition hover:text-neutral-300">
+          Privacy Policy
+        </a>
+
+        <a href="#" class="transition hover:text-neutral-300">
+          Terms
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
