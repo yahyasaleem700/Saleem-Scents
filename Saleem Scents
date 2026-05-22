@@ -48,7 +48,7 @@ export default function SaleemScents() {
           </h2>
 
           <p className="mb-8 max-w-xl text-lg leading-relaxed text-neutral-300">
-            Saleem Scents is moving into natural perfumery, focusing on raw materials, balance, and depth. Currently working on a single winter fragrance project.
+            Saleem Scents is moving into natural perfumery, focusing on raw materials, balance, and depth. Currently working on a winter fragrance project.
           </p>
 
           <div className="flex flex-wrap gap-4">
