@@ -11,7 +11,7 @@
   <header class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/90 backdrop-blur">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
       <div class="flex items-center gap-3">
-        <img id="logoPreview" class="h-10 w-10 rounded-xl object-cover bg-neutral-800" />
+        <img id="logoPreview" alt="Logo" class="hidden h-10 w-10 rounded-xl object-cover bg-neutral-800" />
         <div>
           <h1 class="text-2xl font-bold tracking-wide">SALEEM SCENTS</h1>
           <p class="text-xs uppercase tracking-[0.3em] text-neutral-400">Natural Perfumery</p>
@@ -63,7 +63,7 @@
     </div>
 
     <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6">
-      <img id="collectionPreview" class="w-full rounded-2xl object-cover hidden" />
+      <img id="collectionPreview" alt="Collection" class="hidden w-full rounded-2xl object-cover" />
       <p id="collectionPlaceholder" class="text-neutral-400">No collection image uploaded yet.</p>
 
       <div class="mt-6 text-sm text-neutral-300">
@@ -96,25 +96,32 @@
     const logoUpload = document.getElementById('logoUpload');
     const logoPreview = document.getElementById('logoPreview');
 
-    logoUpload.addEventListener('change', function (e) {
-      const file = e.target.files[0];
-      if (file) {
-        logoPreview.src = URL.createObjectURL(file);
-      }
-    });
+    if (logoUpload && logoPreview) {
+      logoUpload.addEventListener('change', function (e) {
+        const file = e.target.files && e.target.files[0];
+        if (file) {
+          const url = URL.createObjectURL(file);
+          logoPreview.src = url;
+          logoPreview.classList.remove('hidden');
+        }
+      });
+    }
 
     const collectionUpload = document.getElementById('collectionUpload');
     const collectionPreview = document.getElementById('collectionPreview');
     const placeholder = document.getElementById('collectionPlaceholder');
 
-    collectionUpload.addEventListener('change', function (e) {
-      const file = e.target.files[0];
-      if (file) {
-        collectionPreview.src = URL.createObjectURL(file);
-        collectionPreview.classList.remove('hidden');
-        placeholder.classList.add('hidden');
-      }
-    });
+    if (collectionUpload && collectionPreview && placeholder) {
+      collectionUpload.addEventListener('change', function (e) {
+        const file = e.target.files && e.target.files[0];
+        if (file) {
+          const url = URL.createObjectURL(file);
+          collectionPreview.src = url;
+          collectionPreview.classList.remove('hidden');
+          placeholder.classList.add('hidden');
+        }
+      });
+    }
   </script>
 
 </body>
