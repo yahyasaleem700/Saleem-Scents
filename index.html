@@ -33,118 +33,153 @@
 
     @keyframes drift{from{transform:scale(1) translateY(0px);}to{transform:scale(1.08) translateY(-25px);}}
 
-    .glow-card{transition:all 0.35s ease;}
-    .glow-card:hover{transform:translateY(-8px);box-shadow:0 0 40px rgba(110,231,183,0.18);border-color:rgba(110,231,183,0.35);}
+    .card{transition:all .3s ease;}
+    .card:hover{transform:translateY(-6px);box-shadow:0 0 35px rgba(110,231,183,.18);}
 
-    .stock-pill{font-size:11px;padding:4px 10px;border-radius:999px;display:inline-block;margin-top:14px;letter-spacing:0.08em;text-transform:uppercase;}
-    .in-stock{background:rgba(16,185,129,0.15);color:#86efac;border:1px solid rgba(134,239,172,0.2);}
   </style>
 </head>
 
-<body class="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
+<body class="bg-zinc-950 text-zinc-100">
 
-<header class="sticky top-0 z-50 border-b border-white/5 bg-black/30 backdrop-blur-xl">
-  <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-5">
-    <a href="#home" class="flex items-center gap-4">
-      <img src="logo.png" class="w-12 h-12 rounded-md ring-1 ring-emerald-200/20 object-cover" />
+<header class="sticky top-0 z-50 bg-black/40 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-5">
+    <div class="flex items-center gap-3">
+      <img src="logo.png" class="w-10 h-10 rounded-md object-cover" />
       <div>
-        <div class="text-lg font-semibold">SALEEM SCENTS</div>
-        <div class="text-[11px] tracking-[0.35em] text-zinc-400">NATURAL PERFUMERY</div>
+        <div class="font-semibold">SALEEM SCENTS</div>
+        <div class="text-[10px] tracking-[0.3em] text-zinc-400">NATURAL PERFUMERY</div>
       </div>
-    </a>
-
-    <div class="flex gap-4 text-[11px] uppercase tracking-[0.25em] text-zinc-500">
-      <a href="#home" class="hover:text-white">Home</a>
-      <a href="#decants" class="hover:text-white">Shop</a>
+    </div>
+    <div class="text-xs tracking-[0.25em] text-zinc-400 flex gap-4">
+      <a href="#winter">WINTER</a>
+      <a href="#mens">MENS</a>
+      <a href="#womens">WOMENS</a>
     </div>
   </div>
 </header>
 
-<main class="max-w-5xl mx-auto px-6">
+<main class="max-w-6xl mx-auto px-5">
 
-<section id="home" class="py-24">
-  <p class="text-[11px] tracking-[0.4em] text-emerald-200/80 uppercase mb-5">atelier scent house</p>
-
-  <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8">
-    <p class="text-[11px] tracking-[0.35em] uppercase text-emerald-200/70 mb-4">Natural Perfumery Transition</p>
-    <h1 class="text-4xl md:text-5xl font-semibold">Winter fragrance in development</h1>
-    <p class="mt-5 text-zinc-300">A natural composition exploring resins, woods, spice, and winter warmth using botanical materials.</p>
-  </div>
-
-  <div class="mt-10 grid md:grid-cols-3 gap-5">
-    <a href="#home" class="rounded-3xl p-5 bg-white/5 border border-white/10 hover:border-emerald-200/30">
-      <h3 class="text-2xl">Winter Fragrance</h3>
-      <p class="text-sm text-zinc-400">Natural perfumery focus</p>
-    </a>
-    <a href="#decants" class="rounded-3xl p-5 bg-white/5 border border-white/10 hover:border-emerald-200/30">
-      <h3 class="text-2xl">Shop Decants</h3>
-      <p class="text-sm text-zinc-400">Mens & Womens collection</p>
-    </a>
+<!-- WINTER TEASER -->
+<section id="winter" class="py-16">
+  <div class="rounded-3xl border border-emerald-200/20 bg-gradient-to-r from-emerald-300/10 via-sky-300/10 to-teal-300/10 p-8">
+    <p class="text-xs tracking-[0.35em] text-emerald-200 mb-3">ATELIER PROJECT</p>
+    <h1 class="text-4xl font-semibold">Winter fragrance in development</h1>
+    <p class="mt-4 text-zinc-300">A natural perfumery composition exploring resins, woods, spice, and deep winter warmth.</p>
   </div>
 </section>
 
-<!-- DECANTS -->
-<section id="decants" class="py-16">
-
-  <div class="mb-10 rounded-3xl border border-emerald-200/20 bg-gradient-to-r from-emerald-300/10 via-sky-300/10 to-teal-300/10 p-6">
-    <h2 class="text-lg font-semibold">Contact & Purchasing</h2>
-    <p class="text-sm text-zinc-200 mt-2">Instagram or email only for all orders.</p>
-    <p class="text-emerald-200 mt-2">@saleemscents</p>
-    <p class="text-sky-200">saleemscents.shop@gmail.com</p>
+<!-- CONTACT -->
+<section class="mb-10">
+  <div class="rounded-2xl bg-white/5 border border-white/10 p-5">
+    <div class="text-sm font-medium">Contact</div>
+    <div class="text-zinc-300 text-sm mt-2">
+      Instagram: @saleemscents<br/>
+      Email: saleemscents.shop@gmail.com
+    </div>
   </div>
-
-  <!-- MENS -->
-  <h2 class="text-xs tracking-[0.4em] uppercase text-zinc-500 mb-6">mens collection</h2>
-  <div class="grid md:grid-cols-3 gap-5 mb-14">
-
-    <!-- (Mens cards preserved from previous state but shortened here structurally) -->
-    <div class="glow-card p-4 bg-white/5 border border-white/10 rounded-3xl">
-      <h3>Azzaro Chrome</h3><p class="text-xs text-zinc-400">5mL $5.50 • 10mL $9.50 • 30mL $20</p>
-    </div>
-
-    <div class="glow-card p-4 bg-white/5 border border-white/10 rounded-3xl">
-      <h3>Dior Sauvage</h3><p class="text-xs text-zinc-400">5mL $12.50 • 10mL $21.75 • 30mL $45</p>
-    </div>
-
-    <div class="glow-card p-4 bg-white/5 border border-white/10 rounded-3xl">
-      <h3>Versace Eros</h3><p class="text-xs text-zinc-400">5mL $7.50 • 10mL $13.25 • 30mL $27.50</p>
-    </div>
-
-  </div>
-
-  <!-- WOMENS -->
-  <h2 class="text-xs tracking-[0.4em] uppercase text-zinc-500 mb-6">womens collection</h2>
-  <div class="grid md:grid-cols-3 gap-5">
-
-    <div class="glow-card p-4 bg-white/5 border border-white/10 rounded-3xl">
-      <h3>Armaf Club de Nuit Woman</h3><p class="text-xs text-zinc-400">5mL $5 • 10mL $8.75 • 30mL $20</p>
-    </div>
-
-    <div class="glow-card p-4 bg-white/5 border border-white/10 rounded-3xl">
-      <h3>Calvin Klein Euphoria</h3><p class="text-xs text-zinc-400">5mL $7.25 • 10mL $12.50 • 30mL $26</p>
-    </div>
-
-    <div class="glow-card p-4 bg-white/5 border border-white/10 rounded-3xl">
-      <h3>Dolce & Gabbana Light Blue</h3><p class="text-xs text-zinc-400">5mL $7.75 • 10mL $13.50 • 30mL $28</p>
-    </div>
-
-    <div class="glow-card p-4 bg-white/5 border border-white/10 rounded-3xl">
-      <h3>Gucci Guilty Pour Femme</h3><p class="text-xs text-zinc-400">5mL $14 • 10mL $24 • 30mL $50</p>
-    </div>
-
-    <div class="glow-card p-4 bg-white/5 border border-white/10 rounded-3xl">
-      <h3>Moncler Pour Femme</h3><p class="text-xs text-zinc-400">5mL $8.25 • 10mL $14.50 • 30mL $30</p>
-    </div>
-
-    <div class="glow-card p-4 bg-white/5 border border-white/10 rounded-3xl">
-      <h3>Versace Yellow Diamond</h3><p class="text-xs text-zinc-400">5mL $7 • 10mL $12 • 30mL $25</p>
-    </div>
-
-  </div>
-
 </section>
 
-<footer class="py-12 text-center text-xs text-zinc-600">© 2026 Saleem Scents</footer>
+<!-- MENS -->
+<section id="mens" class="py-10">
+  <h2 class="text-xs tracking-[0.4em] text-zinc-500 mb-5">MENS COLLECTION</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="azzaro.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Azzaro Chrome</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="iconic.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Armaf Iconic</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="untold.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Armaf Untold</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="dior.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Dior Sauvage</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="eros.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Versace Eros</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="erosflame.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Eros Flame</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="erosenergy.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Eros Energy</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="eaufraiche.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Eau Fraiche</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="myslf.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">YSL MYSLF</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="montale.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Arabians Tonka</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WOMENS -->
+<section id="womens" class="py-10">
+  <h2 class="text-xs tracking-[0.4em] text-zinc-500 mb-5">WOMENS COLLECTION</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="woman.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Armaf Woman</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="moncler.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Moncler Femme</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="gucci.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Gucci Guilty</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="yellowdiamond.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Yellow Diamond</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="lightblue.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Light Blue</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="flowerbomb.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">Flowerbomb Tiger Lily</div>
+    </div>
+
+    <div class="card bg-white/5 border border-white/10 rounded-2xl p-3">
+      <img src="euphoria.jpg" class="aspect-square w-full rounded-xl object-cover"/>
+      <div class="text-xs mt-2">CK Euphoria</div>
+    </div>
+
+  </div>
+</section>
 
 </main>
 
