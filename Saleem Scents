@@ -1,232 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Saleem Scents - Natural perfumery and fragrance decants." />
-  <title>Saleem Scents</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="min-h-screen bg-neutral-950 text-white antialiased">
+export default function App() {
+  const logo = null;
+  const collection = null;
 
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/90 backdrop-blur">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-      <div class="flex items-center gap-3">
-        <img
-          id="logoPreview"
-          alt="Saleem Scents Logo"
-          class="hidden h-11 w-11 rounded-xl object-cover ring-1 ring-white/10"
-        />
+  return (
+    <div className="min-h-screen bg-neutral-950 text-white antialiased">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/90 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div className="flex items-center gap-3">
+            {logo && (
+              <img src={logo} alt="Logo" className="h-11 w-11 rounded-xl object-cover" />
+            )}
 
-        <div>
-          <h1 class="text-2xl font-bold tracking-wide">SALEEM SCENTS</h1>
-          <p class="text-xs uppercase tracking-[0.35em] text-neutral-400">
-            Natural Perfumery
-          </p>
-        </div>
-      </div>
-
-      <label class="cursor-pointer rounded-xl border border-white/15 px-4 py-2 text-sm transition hover:border-white/40 hover:bg-white/5">
-        Upload Logo
-        <input
-          id="logoUpload"
-          type="file"
-          accept="image/png,image/jpeg,image/webp"
-          class="hidden"
-        />
-      </label>
-    </div>
-  </header>
-
-  <main>
-    <section class="mx-auto grid max-w-7xl gap-14 px-6 py-24 lg:grid-cols-2 lg:items-center">
-      <div>
-        <p class="mb-4 text-sm uppercase tracking-[0.4em] text-neutral-500">
-          Natural Perfumery Brand
-        </p>
-
-        <h2 class="mb-6 text-5xl font-bold leading-tight text-white md:text-6xl">
-          One winter fragrance in development.
-        </h2>
-
-        <p class="mb-8 max-w-xl text-lg leading-relaxed text-neutral-300">
-          Saleem Scents explores modern natural perfumery through rich raw materials,
-          warmth, and depth. The current focus is a single winter fragrance project.
-        </p>
-
-        <div class="flex flex-wrap gap-4">
-          <a
-            href="#collection"
-            class="rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            View Collection
-          </a>
-
-          <a
-            href="#contact"
-            class="rounded-2xl border border-white/20 px-6 py-3 transition hover:border-white/40 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            Contact
-          </a>
-        </div>
-      </div>
-
-      <div class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 p-10 shadow-2xl shadow-black/30">
-        <div class="rounded-[1.5rem] border border-white/10 bg-black/20 p-10 text-center backdrop-blur-sm">
-          <div class="mx-auto mb-6 flex h-32 w-20 items-center justify-center rounded-t-[2rem] rounded-b-xl border border-white/15 bg-neutral-800">
-            <span class="rotate-90 text-xs tracking-[0.4em] text-neutral-400">
-              PERFUME
-            </span>
+            <div>
+              <h1 className="text-2xl font-bold tracking-wide">SALEEM SCENTS</h1>
+              <p className="text-xs uppercase tracking-[0.35em] text-neutral-400">
+                Natural Perfumery
+              </p>
+            </div>
           </div>
 
-          <h3 class="mb-2 text-2xl font-semibold">Winter Project</h3>
-
-          <p class="text-sm text-neutral-400">
-            Natural composition • In development
-          </p>
+          <input type="file" accept="image/*" />
         </div>
-      </div>
-    </section>
+      </header>
 
-    <section id="collection" class="mx-auto max-w-7xl px-6 py-20">
-      <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <div>
-          <h2 class="text-4xl font-bold">Decants Collection</h2>
+      <main>
+        <section className="mx-auto grid max-w-7xl gap-14 px-6 py-24 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="mb-4 text-sm uppercase tracking-[0.4em] text-neutral-500">
+              Natural Perfumery Brand
+            </p>
 
-          <p class="mt-2 text-sm text-neutral-400">
-            Designer fragrances available for decanting from my personal collection.
-          </p>
-        </div>
+            <h2 className="mb-6 text-5xl font-bold leading-tight text-white md:text-6xl">
+              Winter fragrance in development.
+            </h2>
 
-        <label class="w-fit cursor-pointer rounded-2xl border border-white/15 px-5 py-3 text-sm transition hover:border-white/40 hover:bg-white/5">
-          Upload Collection Image
-          <input
-            id="collectionUpload"
-            type="file"
-            accept="image/png,image/jpeg,image/webp"
-            class="hidden"
-          />
-        </label>
-      </div>
+            <p className="mb-8 max-w-xl text-lg leading-relaxed text-neutral-300">
+              Saleem Scents explores modern natural perfumery.
+            </p>
 
-      <div class="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-        <img
-          id="collectionPreview"
-          alt="Fragrance Collection"
-          class="hidden max-h-[600px] w-full rounded-2xl object-cover"
-        />
+            <div className="flex gap-4">
+              <a href="#collection" className="bg-white text-black px-6 py-3 rounded-2xl">View Collection</a>
+              <a href="#contact" className="border border-white/20 px-6 py-3 rounded-2xl">Contact</a>
+            </div>
+          </div>
 
-        <div
-          id="collectionPlaceholder"
-          class="flex min-h-[250px] items-center justify-center rounded-2xl border border-dashed border-white/10 bg-neutral-900/40 px-6 text-center text-neutral-500"
-        >
-          Upload an image of your fragrance collection.
-        </div>
+          <div className="rounded-2xl border border-white/10 p-10">
+            Winter fragrance project
+          </div>
+        </section>
 
-        <div class="mt-6 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <p class="max-w-2xl text-sm leading-relaxed text-neutral-300">
-            Saleem Scents also offers decants from a curated selection of designer fragrances.
-            Reach out for availability and inquiries.
-          </p>
+        <section id="collection" className="mx-auto max-w-7xl px-6 py-20">
+          <h2 className="text-4xl font-bold">Decants Collection</h2>
 
-          <a
-            href="#contact"
-            class="inline-flex w-fit items-center justify-center rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            Inquire About Decants
-          </a>
-        </div>
-      </div>
-    </section>
+          <input type="file" accept="image/*" />
 
-    <section id="contact" class="mx-auto max-w-4xl px-6 py-20">
-      <div class="rounded-[2rem] border border-white/10 bg-white/5 p-10 text-center backdrop-blur-sm">
-        <p class="mb-3 text-sm uppercase tracking-[0.3em] text-neutral-500">
-          Contact
-        </p>
+          {collection && (
+            <img src={collection} className="mt-4 rounded-2xl" />
+          )}
+        </section>
 
-        <h2 class="mb-6 text-4xl font-bold">Get In Touch</h2>
+        <section id="contact" className="mx-auto max-w-4xl px-6 py-20">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold">Contact</h2>
 
-        <p class="mx-auto mb-8 max-w-2xl text-neutral-300">
-          For inquiries, purchases, or fragrance updates, contact Saleem Scents below.
-        </p>
-
-        <div class="flex flex-col items-center gap-4">
-          <a
-            href="https://instagram.com/saleemscents"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            @saleemscents
-          </a>
-
-          <a
-            href="https://saleemscents.shop"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-2xl border border-white/20 px-6 py-3 transition hover:border-white/40 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            saleemscents.shop
-          </a>
-
-          <a
-            href="mailto:saleemscents.shop@gmail.com"
-            class="rounded-2xl border border-white/20 px-6 py-3 transition hover:border-white/40 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            saleemscents.shop@gmail.com
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-white/10 py-8 text-center text-sm text-neutral-500">
-    © 2026 Saleem Scents
-  </footer>
-
-  <script>
-    function setupImageUpload(inputId, previewId, placeholderId) {
-      const input = document.getElementById(inputId);
-      const preview = document.getElementById(previewId);
-      const placeholder = placeholderId
-        ? document.getElementById(placeholderId)
-        : null;
-
-      if (!input || !preview) return;
-
-      input.addEventListener('change', function (event) {
-        const file = event.target.files && event.target.files[0];
-
-        if (!file || !file.type.startsWith('image/')) {
-          return;
-        }
-
-        if (preview.dataset.objectUrl) {
-          URL.revokeObjectURL(preview.dataset.objectUrl);
-        }
-
-        const imageUrl = URL.createObjectURL(file);
-
-        preview.src = imageUrl;
-        preview.dataset.objectUrl = imageUrl;
-        preview.classList.remove('hidden');
-
-        if (placeholder) {
-          placeholder.classList.add('hidden');
-        }
-      });
-    }
-
-    setupImageUpload('logoUpload', 'logoPreview');
-    setupImageUpload('collectionUpload', 'collectionPreview', 'collectionPlaceholder');
-
-    window.addEventListener('beforeunload', function () {
-      document.querySelectorAll('img[data-object-url]').forEach(function (image) {
-        URL.revokeObjectURL(image.dataset.objectUrl);
-      });
-    });
-  </script>
-
-</body>
-</html>
+            <div className="mt-6 flex flex-col gap-4">
+              <a href="https://instagram.com/saleemscents">@saleemscents</a>
+              <a href="https://saleemscents.shop">website</a>
+              <a href="mailto:saleemscents.shop@gmail.com">email</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
