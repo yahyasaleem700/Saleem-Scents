@@ -10,13 +10,13 @@
 
   <header class="sticky top-0 z-50 border-b border-white/5 bg-black/30 backdrop-blur-xl">
     <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-5">
-      <div class="flex items-center gap-4">
-        <img src="logo.png" class="w-12 h-12 rounded-2xl ring-1 ring-amber-200/20 object-cover" alt="Saleem Scents Logo" />
+      <a href="#" class="flex items-center gap-4">
+        <img src="logo.png" class="w-12 h-12 rounded-md ring-1 ring-amber-200/20 object-cover" alt="Saleem Scents Logo" />
         <div>
           <div class="text-lg font-semibold tracking-wide">SALEEM SCENTS</div>
           <div class="text-[11px] tracking-[0.35em] text-zinc-400">NATURAL PERFUMERY</div>
         </div>
-      </div>
+      </a>
 
       <div class="hidden md:block text-[11px] tracking-[0.25em] text-zinc-500 uppercase">
         small batch • winter atelier • natural compositions
@@ -49,26 +49,7 @@
 
     <section id="products" class="py-16">
       <h2 class="text-xs tracking-[0.4em] uppercase text-zinc-500 mb-8">fragrance collection</h2>
-
-      <div class="grid md:grid-cols-2 gap-6">
-
-        <div class="rounded-3xl p-7 bg-white/5 border border-white/10 hover:border-amber-200/20 transition">
-          <h3 class="text-xl font-medium">Winter Fragrance</h3>
-          <p class="text-zinc-400 mt-2 text-sm">In development • natural composition</p>
-          <a href="https://wa.me/XXXXXXXXXXX" class="inline-block mt-5 px-5 py-2.5 rounded-xl bg-amber-200 text-black text-sm font-medium">
-            Order via WhatsApp
-          </a>
-        </div>
-
-        <div class="rounded-3xl p-7 bg-white/5 border border-white/10 hover:border-amber-200/20 transition">
-          <h3 class="text-xl font-medium">Designer Decants</h3>
-          <p class="text-zinc-400 mt-2 text-sm">Curated luxury fragrance selection from personal collection</p>
-          <a href="https://wa.me/XXXXXXXXXXX" class="inline-block mt-5 px-5 py-2.5 rounded-xl border border-white/10 text-zinc-200 hover:border-amber-200/30 transition">
-            Inquire via WhatsApp
-          </a>
-        </div>
-
-      </div>
+      <div id="productsGrid" class="grid md:grid-cols-2 gap-6"></div>
     </section>
 
     <section id="contact" class="py-20">
@@ -84,6 +65,49 @@
     </footer>
 
   </main>
+
+<script>
+const products = [
+  {
+    name: "Winter Fragrance",
+    description: "In development • natural composition",
+    image: "product1.png",
+    sizes: [
+      { ml: "5ml", price: "$15" },
+      { ml: "10ml", price: "$25" },
+      { ml: "30ml", price: "$55" }
+    ],
+    whatsapp: "https://wa.me/XXXXXXXXXXX"
+  },
+  {
+    name: "Designer Decants",
+    description: "Curated luxury fragrance selection",
+    image: "product2.png",
+    sizes: [
+      { ml: "5ml", price: "$10" },
+      { ml: "10ml", price: "$18" },
+      { ml: "30ml", price: "$40" }
+    ],
+    whatsapp: "https://wa.me/XXXXXXXXXXX"
+  }
+];
+
+const grid = document.getElementById("productsGrid");
+
+grid.innerHTML = products.map(p => `
+  <div class="rounded-3xl p-7 bg-white/5 border border-white/10 hover:border-amber-200/20 transition">
+    <img src="${p.image}" class="w-full h-48 object-cover rounded-2xl mb-4" />
+    <h3 class="text-xl font-medium">${p.name}</h3>
+    <p class="text-zinc-400 mt-2 text-sm">${p.description}</p>
+    <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
+      ${p.sizes.map(s => `<span class='px-2 py-1 border border-white/10 rounded-lg'>${s.ml} - ${s.price}</span>`).join("")}
+    </div>
+    <a href="${p.whatsapp}" class="inline-block mt-5 px-5 py-2.5 rounded-xl bg-amber-200 text-black text-sm font-medium">
+      Order via WhatsApp
+    </a>
+  </div>
+`).join("");
+</script>
 
 </body>
 </html>
