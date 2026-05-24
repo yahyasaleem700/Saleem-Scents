@@ -6,6 +6,10 @@
   <title>Saleem Scents</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    html{
+      scroll-behavior:smooth;
+    }
+
     body::before{
       content:'';
       position:fixed;
@@ -32,6 +36,38 @@
     @keyframes drift{
       from{transform:scale(1) translateY(0px);}
       to{transform:scale(1.08) translateY(-25px);}
+    }
+
+    .glow-card{
+      transition:all 0.35s ease;
+    }
+
+    .glow-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 0 40px rgba(110,231,183,0.18);
+      border-color:rgba(110,231,183,0.35);
+    }
+
+    .stock-pill{
+      font-size:11px;
+      padding:4px 10px;
+      border-radius:999px;
+      display:inline-block;
+      margin-top:14px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+    }
+
+    .in-stock{
+      background:rgba(16,185,129,0.15);
+      color:#86efac;
+      border:1px solid rgba(134,239,172,0.2);
+    }
+
+    .low-stock{
+      background:rgba(251,191,36,0.15);
+      color:#fde68a;
+      border:1px solid rgba(253,230,138,0.2);
     }
   </style>
 </head>
@@ -85,15 +121,69 @@
       <h2 class="text-xs tracking-[0.4em] uppercase text-zinc-500 mb-8">designer decants collection</h2>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="rounded-3xl p-7 bg-white/5 border border-white/10 backdrop-blur-xl">
+        <div class="glow-card rounded-3xl p-7 bg-white/5 border border-white/10 backdrop-blur-xl">
           <img src="product1.png" class="w-full h-48 object-cover rounded-2xl mb-4" />
-          <h3 class="text-xl font-medium">Designer Sample Set</h3>
-          <p class="text-zinc-400 mt-2 text-sm">Curated luxury fragrance decants</p>
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-medium">Bleu de Chanel</h3>
+            <span class="stock-pill in-stock">In Stock</span>
+          </div>
+          <p class="text-zinc-400 mt-2 text-sm">Fresh woody citrus designer fragrance</p>
+
+          <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
+            <span class="px-2 py-1 border border-white/10 rounded-lg">5ml - $12</span>
+            <span class="px-2 py-1 border border-white/10 rounded-lg">10ml - $20</span>
+            <span class="px-2 py-1 border border-white/10 rounded-lg">30ml - $48</span>
+          </div>
+
+          <a href="https://wa.me/XXXXXXXXXXX" class="inline-block mt-5 px-5 py-2.5 rounded-xl bg-emerald-300 text-black font-medium">Order via WhatsApp</a>
+        </div>
+
+        <div class="glow-card rounded-3xl p-7 bg-white/5 border border-white/10 backdrop-blur-xl">
+          <img src="product2.png" class="w-full h-48 object-cover rounded-2xl mb-4" />
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-medium">JPG Le Beau</h3>
+            <span class="stock-pill low-stock">Low Stock</span>
+          </div>
+          <p class="text-zinc-400 mt-2 text-sm">Sweet tropical tonka-based designer fragrance</p>
+
+          <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
+            <span class="px-2 py-1 border border-white/10 rounded-lg">5ml - $11</span>
+            <span class="px-2 py-1 border border-white/10 rounded-lg">10ml - $19</span>
+            <span class="px-2 py-1 border border-white/10 rounded-lg">30ml - $46</span>
+          </div>
+
+          <a href="https://wa.me/XXXXXXXXXXX" class="inline-block mt-5 px-5 py-2.5 rounded-xl bg-emerald-300 text-black font-medium">Order via WhatsApp</a>
+        </div>
+
+        <div class="glow-card rounded-3xl p-7 bg-white/5 border border-white/10 backdrop-blur-xl">
+          <img src="product3.png" class="w-full h-48 object-cover rounded-2xl mb-4" />
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-medium">YSL Y EDP</h3>
+            <span class="stock-pill in-stock">Available</span>
+          </div>
+          <p class="text-zinc-400 mt-2 text-sm">Modern aromatic blue fragrance</p>
 
           <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
             <span class="px-2 py-1 border border-white/10 rounded-lg">5ml - $10</span>
             <span class="px-2 py-1 border border-white/10 rounded-lg">10ml - $18</span>
-            <span class="px-2 py-1 border border-white/10 rounded-lg">30ml - $40</span>
+            <span class="px-2 py-1 border border-white/10 rounded-lg">30ml - $44</span>
+          </div>
+
+          <a href="https://wa.me/XXXXXXXXXXX" class="inline-block mt-5 px-5 py-2.5 rounded-xl bg-emerald-300 text-black font-medium">Order via WhatsApp</a>
+        </div>
+
+        <div class="glow-card rounded-3xl p-7 bg-white/5 border border-white/10 backdrop-blur-xl">
+          <img src="product4.png" class="w-full h-48 object-cover rounded-2xl mb-4" />
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="text-xl font-medium">Ameer Al Oud</h3>
+            <span class="stock-pill low-stock">Limited</span>
+          </div>
+          <p class="text-zinc-400 mt-2 text-sm">Rich smoky sweet winter fragrance</p>
+
+          <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
+            <span class="px-2 py-1 border border-white/10 rounded-lg">5ml - $9</span>
+            <span class="px-2 py-1 border border-white/10 rounded-lg">10ml - $16</span>
+            <span class="px-2 py-1 border border-white/10 rounded-lg">30ml - $38</span>
           </div>
 
           <a href="https://wa.me/XXXXXXXXXXX" class="inline-block mt-5 px-5 py-2.5 rounded-xl bg-emerald-300 text-black font-medium">Order via WhatsApp</a>
