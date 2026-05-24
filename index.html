@@ -57,7 +57,6 @@
 
   <main class="max-w-5xl mx-auto px-6">
 
-    <!-- HOME VIEW -->
     <section id="home" class="py-24">
       <p class="text-[11px] tracking-[0.4em] text-emerald-200/80 uppercase mb-5">atelier scent house</p>
 
@@ -69,23 +68,39 @@
         A focused exploration into natural perfumery — warm resins, soft woods, and winter spice accords, crafted in anticipation of greatness.
       </p>
 
-      <div class="mt-10 flex gap-4">
-        <a href="#decants" class="px-6 py-3 rounded-2xl bg-emerald-300 text-black font-medium hover:bg-emerald-200 transition">
-          Explore Decants
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <a href="#home" class="rounded-3xl p-7 bg-white/5 border border-white/10 hover:border-emerald-200/30 transition backdrop-blur-xl">
+          <h3 class="text-xl font-medium">Winter Fragrance</h3>
+          <p class="text-zinc-400 mt-2 text-sm">Anticipating greatness • in development</p>
         </a>
-        <a href="#contact" class="px-6 py-3 rounded-2xl border border-white/10 text-zinc-200 hover:border-emerald-200/40 transition">
-          Contact
+
+        <a href="#decants" class="rounded-3xl p-7 bg-white/5 border border-white/10 hover:border-emerald-200/30 transition backdrop-blur-xl">
+          <h3 class="text-xl font-medium">Designer Decants</h3>
+          <p class="text-zinc-400 mt-2 text-sm">Explore curated fragrances & pricing</p>
         </a>
       </div>
     </section>
 
-    <!-- DECANTS VIEW -->
     <section id="decants" class="py-16">
       <h2 class="text-xs tracking-[0.4em] uppercase text-zinc-500 mb-8">designer decants collection</h2>
-      <div id="productsGrid" class="grid md:grid-cols-2 gap-6"></div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-3xl p-7 bg-white/5 border border-white/10 backdrop-blur-xl">
+          <img src="product1.png" class="w-full h-48 object-cover rounded-2xl mb-4" />
+          <h3 class="text-xl font-medium">Designer Sample Set</h3>
+          <p class="text-zinc-400 mt-2 text-sm">Curated luxury fragrance decants</p>
+
+          <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
+            <span class="px-2 py-1 border border-white/10 rounded-lg">5ml - $10</span>
+            <span class="px-2 py-1 border border-white/10 rounded-lg">10ml - $18</span>
+            <span class="px-2 py-1 border border-white/10 rounded-lg">30ml - $40</span>
+          </div>
+
+          <a href="https://wa.me/XXXXXXXXXXX" class="inline-block mt-5 px-5 py-2.5 rounded-xl bg-emerald-300 text-black font-medium">Order via WhatsApp</a>
+        </div>
+      </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="py-20">
       <h2 class="text-xs tracking-[0.4em] uppercase text-zinc-500 mb-6">contact</h2>
       <div class="flex flex-col gap-3 text-zinc-300">
@@ -99,38 +114,6 @@
     </footer>
 
   </main>
-
-<script>
-const decants = [
-  {
-    name: "Designer Sample Set",
-    description: "Curated luxury fragrance decants",
-    image: "product2.png",
-    sizes: [
-      { ml: "5ml", price: "$10" },
-      { ml: "10ml", price: "$18" },
-      { ml: "30ml", price: "$40" }
-    ],
-    whatsapp: "https://wa.me/XXXXXXXXXXX"
-  }
-];
-
-const grid = document.getElementById("productsGrid");
-
-grid.innerHTML = decants.map(p => `
-  <div class="rounded-3xl p-7 bg-white/5 border border-white/10 hover:border-emerald-200/30 transition backdrop-blur-xl">
-    <img src="${p.image}" class="w-full h-48 object-cover rounded-2xl mb-4" />
-    <h3 class="text-xl font-medium">${p.name}</h3>
-    <p class="text-zinc-400 mt-2 text-sm">${p.description}</p>
-    <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
-      ${p.sizes.map(s => `<span class='px-2 py-1 border border-white/10 rounded-lg'>${s.ml} - ${s.price}</span>`).join('')}
-    </div>
-    <a href="${p.whatsapp}" class="inline-block mt-5 px-5 py-2.5 rounded-xl bg-emerald-300 text-black text-sm font-medium">
-      Order via WhatsApp
-    </a>
-  </div>
-`).join('');
-</script>
 
 </body>
 </html>
