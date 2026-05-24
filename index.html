@@ -5,8 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saleem Scents</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body::before{
+      content:'';
+      position:fixed;
+      inset:0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(251,191,36,0.12), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(99,102,241,0.10), transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(244,114,182,0.08), transparent 50%);
+      filter: blur(50px);
+      z-index:-2;
+      animation: drift 14s ease-in-out infinite alternate;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      inset:0;
+      background-image:url("https://www.transparenttextures.com/patterns/noise.png");
+      opacity:0.05;
+      z-index:-1;
+      pointer-events:none;
+    }
+
+    @keyframes drift{
+      from{transform:scale(1) translateY(0px);}
+      to{transform:scale(1.08) translateY(-25px);}
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-zinc-950 via-neutral-950 to-black text-zinc-100 antialiased">
+
+<body class="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
 
   <header class="sticky top-0 z-50 border-b border-white/5 bg-black/30 backdrop-blur-xl">
     <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-5">
@@ -34,16 +64,12 @@
       </h1>
 
       <p class="mt-6 text-zinc-300 max-w-2xl leading-relaxed text-lg">
-        A focused exploration into natural perfumery — warm resins, soft woods, and winter spice accords, composed in small experimental batches with attention to depth, texture, and longevity.
+        A focused exploration into natural perfumery — warm resins, soft woods, and winter spice accords, composed in small experimental batches with depth, texture, and character.
       </p>
 
       <div class="mt-10 flex gap-4">
-        <a href="#products" class="px-6 py-3 rounded-2xl bg-amber-200 text-black font-medium hover:bg-amber-100 transition">
-          Explore Scents
-        </a>
-        <a href="#contact" class="px-6 py-3 rounded-2xl border border-white/10 text-zinc-200 hover:border-amber-200/40 transition">
-          Contact
-        </a>
+        <a href="#products" class="px-6 py-3 rounded-2xl bg-amber-200 text-black font-medium hover:bg-amber-100 transition">Explore Scents</a>
+        <a href="#contact" class="px-6 py-3 rounded-2xl border border-white/10 text-zinc-200 hover:border-amber-200/40 transition">Contact</a>
       </div>
     </section>
 
@@ -95,18 +121,16 @@ const products = [
 const grid = document.getElementById("productsGrid");
 
 grid.innerHTML = products.map(p => `
-  <div class="rounded-3xl p-7 bg-white/5 border border-white/10 hover:border-amber-200/20 transition">
+  <div class="rounded-3xl p-7 bg-white/5 border border-white/10 hover:border-amber-200/20 transition backdrop-blur-xl">
     <img src="${p.image}" class="w-full h-48 object-cover rounded-2xl mb-4" />
     <h3 class="text-xl font-medium">${p.name}</h3>
     <p class="text-zinc-400 mt-2 text-sm">${p.description}</p>
     <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
-      ${p.sizes.map(s => `<span class='px-2 py-1 border border-white/10 rounded-lg'>${s.ml} - ${s.price}</span>`).join("")}
+      ${p.sizes.map(s => `<span class='px-2 py-1 border border-white/10 rounded-lg'>${s.ml} - ${s.price}</span>`).join('')}
     </div>
-    <a href="${p.whatsapp}" class="inline-block mt-5 px-5 py-2.5 rounded-xl bg-amber-200 text-black text-sm font-medium">
-      Order via WhatsApp
-    </a>
+    <a href="${p.whatsapp}" class="inline-block mt-5 px-5 py-2.5 rounded-xl bg-amber-200 text-black text-sm font-medium">Order via WhatsApp</a>
   </div>
-`).join("");
+`).join('');
 </script>
 
 </body>
